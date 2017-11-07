@@ -1,13 +1,14 @@
 {
-  "name": "Sequelized-Burger",
-  "version": "1.0.0",
+  "name": "burger-sequelize",
+  "version": "1.0.3",
   "description": "A display of sequelize and the use of NodeJS ExpressJS and Handlebars",
   "main": "server.js",
   "scripts": {
     "cd": "cd ../public && npm install && npm start",
     "sequelize": "echo \"Sequelized!\" && npm run cd",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd ../public && npm install && npm start"
+    "build": "npm install",
+    "start": "npm run build && node server.js"
   },
   "repository": {
     "type": "git",
