@@ -1,4 +1,6 @@
-api api/ # Logs
+apis apis/ 
+apis/*
+# Logs
 logs
 *.log
 npm-debug.log*
