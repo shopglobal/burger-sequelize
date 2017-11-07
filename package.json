@@ -1,0 +1,38 @@
+{
+  "name": "Sequelized-Burger",
+  "version": "1.0.0",
+  "description": "A display of sequelize and the use of NodeJS ExpressJS and Handlebars",
+  "main": "server.js",
+  "scripts": {
+    "cd": "cd ../public && npm install && npm start",
+    "sequelize": "echo \"Sequelized!\" && npm run cd",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd ../public && npm install && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shopglobal/burger-sequelize.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shopglobal/burger-sequelize/issues"
+  },
+  "homepage": "https://github.com/shopglobal/burger-sequelize#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "handlebars-helpers": "^0.9.8",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.4.2",
+    "path": "^0.12.7",
+    "request": "^2.83.0",
+    "sequelize": "^4.22.5",
+    "serve-index": "^1.9.1"
+  }
+}

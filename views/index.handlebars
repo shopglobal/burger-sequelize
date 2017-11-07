@@ -1,0 +1,81 @@
+<section class="parallax">
+    <img src="/assets/images/burger-icon.png">
+</section>
+
+<main>
+  <div class="jumbotron"> 
+    <section class="">
+        
+    </section>
+    <section>
+<div class="burger-ops row">
+        <div class="options" id="a">
+          <div class="col-12 form-group s12">
+        <h2 id="thread">Add a Burger</h2>
+        <form class="create-update-form" action="burgers/create" method="POST">
+                <label>Burgers Name</label>
+                <input type="text" name="burger_name" class="drawn-border formVal" id="formAdd">
+                <button id="grid-add" class="btn btn-img btn-tap" type="submit">{{!-- <label></label> --}}
+                <img src="/assets/images/burger-btn.png" alt="Add Burger" /></button>
+        </form>
+        </div>
+        <br>
+      </div>
+        <div class="col-9">
+        <div align="center" class="options devoured row form-control col-9 col s12 m4 l3 " id="c">
+          <div align="center" class="">
+            <h1 class="status" align="center" id="that">Devoured</h1>
+            
+            <table align="center" class="burger-status li">
+              {{#each burgers}}
+                {{#if this.devoured}}
+                  <table class="responsive-table" class="li">
+                  <tr align="center" >
+                    <th align="center" id="score">{{this.burger_name}}</th>
+                  </tr>
+                  </table>
+                {{/if}}
+              {{/each}}
+            </table>
+        </div>
+        <br>
+      </div>
+      <br>
+  </div>
+      <div class="options available row" >
+        <br>
+        <br>
+        <div align="center" class="col s12 m8 l9" id="b">
+                <h1 class="status" align="center" id="avail">Available Burgers</h1>
+                <ul class="burger-status">
+                  {{#each burgers}}
+                   {{#unless this.devoured}}
+                      <li class="burger-status" id="this">
+                        {{this.burger_name}} 
+                        <form method="POST" action="burgers/update/{{this.id}}?_method=PUT">
+                          <input type="hidden" name="devoured" value="true">
+                          <div class="dropzone" id="push">
+                          <div class="grid-snap" id="grid-snap">
+                          <a type="submit" class="btn-img btn-tap" href="#" onclick="$(this).closest('form').submit()" >
+                            <img src="/assets/images/burger-btn.png" alt="Devour!" />
+                          <input type="hidden" name="id" value="{{this.id}}" class="drawn-border formVal" id="formVal">
+                          </a></div>
+                          </div>
+                        </form>
+                      </li>
+                    {{/unless}}
+                  {{/each}}
+                </ul>
+            <br>
+        </div>
+      </div>
+</div>
+</section>
+</div>{{#each burgers}}
+<footer align="center">
+</footer>{{/each}}
+</main>       
+
+
+
+                           

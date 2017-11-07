@@ -1,0 +1,940 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+	background-image: url(../images/restaurant-bg.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	padding: 30px; 
+	
+}
+
+div.jumbotron, html, {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+/*	margin-bottom: 40px;*/
+	font-family: 'Fruktur', cursive;
+	
+}
+div.container, {
+	width: 100%;
+	padding: 05px; 
+	margin: 0 auto;
+	font-family: 'Fruktur', cursive;
+	
+}
+div.available {
+	color: #fff;
+	/*//greyscale ToDo*/
+}
+div.devoured {
+	background-image: url(../images/restaurant-bg.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+	color: #fff; 
+
+	/*//greyscale ToDo*/
+}
+
+main {
+	width: 100%;
+	margin: 0 auto;
+	
+
+}
+
+nav {
+	text-align: center;
+	width: 100%;
+	background: #272826;
+}
+
+
+
+div.darken {
+	-webkit-box-shadow: 0 10px 10px 0px rgba(0,0,0, 0.5);
+	-moz-box-shadow: 0 10px 10px 0px rgba(0,0,0, 0.5);
+	box-shadow: 0 10px 10px 0px rgba(0,0,0, 0.5);
+}
+
+/*div#box{
+	position: relative;  
+    overflow:hidden;
+    border:1px solid black;
+    padding: 10px;
+}
+*/
+/*div#content{
+	position: relative;
+
+    
+     * Uncomment to see scrollbar
+    width:300px;
+    
+    
+}*/
+
+section {
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2em;
+}
+
+p {
+	font-family: 'Fruktur', cursive;
+}
+
+button {
+
+}
+
+button:hover {    
+	animation-name: buttonHover;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+/*@keyframes buttonHover {
+    to {background-color: rgba(246,200,71,1);}
+}*/
+#outer-dropzone {
+  height: 140px;
+}
+
+#inner-dropzone {
+  height: 80px;
+}
+
+.dropzone {
+  background-color: #ccc;
+  border: dashed 4px transparent;
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2em 0.5em;
+  color: #fff;
+  background-color: #29e;
+  border: solid 2px #fff;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
+}
+h1, #avail, .status {margin:0% 10% 0% 10%;}
+#grid-snap {
+  width: auto;
+  background-color: #e2c106;
+/*  color: #fff;*/
+  /*font-size: 1.125em;*/
+  padding: 2%;
+  margin: 02% 0% 0% 40%;
+  /*border-radius: 100%;*/
+}
+.btn-tap {
+  /*width: 50%;*/
+  /*height: auto;*/
+  /*padding: 5%;*/
+  /*margin: 02% 0% 0% 30%;*/
+  border-radius: 100%;
+/*  font-size: 1.125em;*/
+  text-align: center;
+  color: #fff;
+  background-color: #e2c106;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-devour {
+  /*width: 50%;*/
+  height: 100%;
+  padding: 5%;
+  margin: 02% 0% 0% 30%;
+  border-radius: 100%;
+  font-size: 1.125em;
+  text-align: center;
+  color: #fff;
+  background-color: #e2c106;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tap-target.switch-bg {
+  background-color: #565501;
+}
+
+.tap-target.large {
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#page-header {
+	margin: 0px;
+	text-align: center
+}
+
+#page-body {
+
+}
+input.formVal.drawn-border,{position:relative;margin:0% 0% 0% 30%;padding:0px 0px 0px 400px;}
+.drawn-border, label {
+	display: block;
+	position: relative !important;
+	/*margin: 0% 30% 0% 30%;*/
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	padding:1em;
+	line-height:1.5em;
+	background:hsla(67, 95%, 95%, 1) !important;
+	color: hsla(0, 95%, 35%, 1) !important;
+	border: solid 5px rgba(246,200,71,1) !important;
+}
+   div,#c,.options,.devoured,.row,.form-control {
+	background-color:transparent !important;
+}
+section.parallax { 
+	width: 100%;
+    text-align: center;
+    padding: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+}
+
+section.parallax::after {
+	content: "";
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1; 
+	justify-content: center;
+	height: 300px;
+	width: 100%;
+	background-image: url(../images/burger-background.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+	animation-name: parallaxBack;
+	animation-duration: 6s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes parallaxBack {
+    from {background-position: 50% 0px;}
+    to {background-position: 50% -100px;}
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+#page-header{font-size:4em;padding-top: 0;margin:0% 10% 0% 10%;text-align: center}
+div#a{
+	font-family: 'Fruktur', cursive;	
+	text-align: inherit;
+    width : 100%;
+    position: relative;
+    background-color : black;
+    float: left
+}
+div#b{
+	font-family: 'Fruktur', cursive;	
+	text-align: inherit;
+    width : 100%;
+    position: relative;
+    background-color : orange;  
+}
+div#c{
+	font-family: 'Fruktur', cursive;	
+	text-align: inherit;
+    width : 100%;
+    margin: auto;
+    position: relative;
+    background-color : green;
+    float : right;
+}
+@media only screen and (max-width: 1440px) and (min-width: 1024px){
+div,.col-12,.form-group,.s12 {
+	background-color:transparent !important;;
+}
+h1,h2,h3,h4{font-family: 'Fruktur', cursive;}
+div#a, div#b, div#c, h2 {
+    width:  100%;
+    height:  100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+label {display:none;}
+#thread {font-size:1.5em;}
+.col-3{width:100%;}
+.col-9{width:100%;}
+.col-12{width:100%;}
+.btn-img.btn-tap{margin:05% 0% 0% 45%;}
+#grid-snap {margin:0% 30% 0% 37%}
+#grid-add {margin:5% 20% 0% 65%}
+#page-header{font-size:4em;padding-top: 0;margin:0% 10% 0% 10%;text-align: center}
+input.formVal.drawn-border {position:relative;margin:0% 0% 0% 30%;padding:0px 0px 0px 10px;}
+#this.burger-status {color:#bb5c06;}
+img.drawn-border,button,.btn-img,.btn-tap{margin:0% 0% 0% 50%; margin-left: 10%}
+#that {font-size: 1.9em;color:#fbd303;position:relative;margin:0% 20% 0% 30%;padding:0px 90px 0px 0px;text-decoration: underline;}
+#avail {color:#000;text-decoration: underline;}
+h1.status {position:relative;margin:0% 0% 0% 20%;padding:0px 0px 0px 10px;}
+#push{margin: 0% 10% 0% 0%;}
+#score {font-size:3em;text-decoration: underline;text-align:center;}
+li.burger-status, .btn, #grid-snap,li,h4 {
+    
+    width:  auto;
+    height: auto;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+ul.devoured-status {
+  
+    width:  100%; 
+    height: 100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12.8em;
+}
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+  *{cursor:pointer;}
+div,.col-12,.form-group,.s12 {
+	background-color:transparent !important;;
+}
+h1,h2,h3,h4{font-family: 'Fruktur', cursive;}
+div#a, div#b, div#c, h2 {
+    
+    width:  100%;
+    height:  100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+label {display:none;}
+#thread {font-size:1.5em;}
+.col-3{width:100%;}
+.col-9{width:100%;}
+.col-12{width:100%;}
+.btn-img.btn-tap{margin:05% 0% 0% 45%;}
+#this.burger-status {color:#bb5c06;}
+#grid-snap {margin:0% 30% 0% 37%}
+#grid-add {margin:5% 20% 0% 65%}
+#page-header{font-size:4em;padding-top: 1%;margin:0% 10% 0% 10%;text-align: center}
+#that {font-size: 1.9em;color:#fbd303;position:relative;margin:0% 20% 0% 30%;padding:0px 90px 0px 0px;text-decoration: underline;}
+#avail {color:#000;text-decoration: underline;}
+#that{margin:0% 0% 0% 15%; text-align: center;font-size:5em;}
+#li,#this.burger-status{text-decoration: bold;}
+.li,.burger-status,.striped,p.{font-size:5em;}
+#push{margin: 0% 10% 0% 0%;}
+#score {font-size: 2em; text-decoration: underline; text-align: center;}
+h1,#avail,.status{text-align: center}
+li.burger-status, .btn, #grid-snap,li,h4 {
+    
+    width:  auto;
+    height: auto;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+ul.devoured-status {
+    
+    width:  100%;
+    height: 100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12.8em;
+}
+}
+@media only screen and (max-width: 768px) and (min-width: 550px){
+*{cursor:pointer;}
+div,.col-12,.form-group,.s12 {
+	background-color:transparent !important;;
+}
+h1,h2,h3,h4{font-family: 'Fruktur', cursive;}
+div#a, div#b, div#c, h2 {
+    
+    width:  100%;
+    height:  100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+label {display:none;}
+#thread {font-size:1.5em;}
+.col-3{width:100%;}
+.col-9{width:100%;}
+.col-12{width:100%;}
+.btn-img.btn-tap{margin:05% 0% 0% 45%;}
+#this.burger-status {color:#bb5c06;}
+#grid-snap {margin:0% 30% 0% 37%}
+#grid-add {margin:5% 20% 0% 65%}
+#page-header{font-size:3em;padding-top: 2%;margin:0% 10% 0% 10%;text-align: center}
+#that {font-size: 1.9em;color:#fbd303;position:relative;margin:0% 20% 0% 30%;padding:0px 90px 0px 0px;text-decoration: underline;}
+#avail {color:#000;text-decoration: underline;}
+#that{margin:0% 0% 0% 15%; text-align: center;font-size:5em;}
+#li,#this.burger-status{text-decoration: bold;}
+.li,.burger-status,.striped,p.{font-size:5em;}
+#formAdd {margin:5% 20% 0% 40%}
+#push{margin: 0% 20% 0% 0%;}
+#score {font-size: 1.3em; text-decoration: underline; text-align: center;}
+h1,#avail,.status{text-align: center}
+li.burger-status, .btn, #grid-snap,li,h4 {
+    
+    width:  auto;
+    height: auto;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+ul.devoured-status {
+    
+    width:  100%;
+    height: 100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12.8em;
+}
+}
+@media only screen and (max-width: 550px) and (min-width: 425px){
+  *{cursor:pointer;}
+   div,.col-12,.form-group,.s12 {
+	background-color:transparent !important;;
+}
+div#a, div#b, div#c, h2 {
+    
+    width:  100%;
+    height:  100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+label {display:none;}
+#thread {font-size:1.5em;}
+.col-3{width:100%;}
+.col-9{width:100%;}
+.col-12{width:100%;}
+.btn-img.btn-tap{margin:05% 0% 0% 45%;}
+.dropdown,.sub-menu{display:none;}
+li#this.burger-status{text-decoration: bold;}
+h1,#avail,.status,#that{text-align: center}
+#this.burger-status {color:#bb5c06;}
+h1,h2,h3,h4{font-family: 'Fruktur', cursive;}
+#grid-snap {margin:0% 30% 0% 37%}
+#page-header{font-size:2em;padding-top: 5%;margin:0% 10% 0% 10%;text-align: center}
+#grid-add {margin:5% 50% 0% 35%}
+#page-header{font-size:1.7em;padding-top: 8%;margin:0% 10% 0% 10%;text-align: center}
+#that {font-size: 2.5em;color:#fbd303;position:relative;margin:0% 30% 0% 30%;padding:0px 100px 0px 0px;text-decoration: underline;}
+#avail {color:#000;text-decoration: underline;}
+#that{margin:0% 0% 0% 15%; text-align: center;}
+#formAdd {margin:5% 20% 0% 30%}
+#push{margin: 0% 20% 0% -11%;}
+#score {font-size: 1em; text-decoration: underline; text-align: center;}
+h1,#page-header{font-size:1.2em;}
+li.burger-status, .btn, #grid-snap,li,h4 {
+    
+    width:  auto;
+    height: auto;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+ul.devoured-status {
+    
+    width:  100%;
+    height: 100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12.8em;
+}
+}
+@media only screen and (max-width: 425px) and (min-width: 375px){
+  *{cursor:pointer;}
+   div,.col-12,.form-group,.s12 {
+	background-color:transparent !important;
+}
+h1,h2,h3,h4{font-family: 'Fruktur', cursive;}
+div#a, div#b, div#c, h2 {
+    
+    width:  100%;
+    height:  100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+label {display:none;}
+#thread {font-size:1.5em;}
+.col-3{width:100%;}
+.col-9{width:100%;}
+.col-12{width:100%;}
+#page-header{font-size:1em;padding-top: 5%;margin:0% 10% 0% 10%;text-align: center}
+.dropdown,.sub-menu{display:none;}
+/*h1,#that,.status{text-align: left}*/
+#grid-snap {margin:0% 50% 0% 20%}
+#grid-add {margin:5% 50% 0% 35%}
+#this.burger-status {color:#bb5c06;}
+#that {font-size: 1.5em;color:#fbd303;position:relative;margin:0% 20% 0% 30%;padding:0px 90px 0px 0px;text-decoration: underline;}
+#avail {color:#000;text-decoration: underline;}
+.btn-img.btn-tap{margin:05% 0% 0% 45%;}
+#push{margin: 0% 10% 0% 0%;}
+#score {font-size: .8em; text-decoration: underline; text-align: center;}
+#formAdd {margin:5% 20% 0% 35%}
+li#this.burger-status{text-decoration: bold;}
+h1,#avail,.status{text-align: center}
+li.burger-status, .btn, #grid-snap,li,h4 {
+    
+    width:  auto;
+    height: auto;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+ul.devoured-status {
+    
+    width:  100%;
+    height: 100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12.8em;
+}
+}
+@media only screen and (max-width: 375px) and (min-width: 325px){
+  *{cursor:pointer;}
+   div,.col-12,.form-group,.s12 {
+	background-color:transparent !important;;
+}
+h1,h2,h3,h4{font-family: 'Fruktur', cursive;}
+div#a, div#b, div#c, h2 {
+    
+    width:  100%;
+    height:  100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+label {display:none;}
+#thread {font-size:1.5em;}
+.col-3{width:100%;}
+.col-9{width:100%;}
+.col-12{width:100%;}
+.dropdown,.sub-menu{display:none;}
+.btn-img.btn-tap{margin:05% 0% 0% 45%;}
+#this.burger-status {color:#bb5c06;}
+#grid-add {margin:0% 60% 0% 0%}
+#grid-snap {margin:5% 60% 0% 0%}
+#page-header{font-size:.6em;padding-top: 8%;margin:0% 10% 0% 10%;text-align: center}
+h1,#that,.status {font-size: 0.2em;color:#fbd303;position:relative;margin:0% 20% 0% 30%;padding:0px 90px 0px 0px;text-decoration: underline;}
+#avail {color:#000;text-decoration: underline;}
+#that {margin:0% 40% 0% 10%; text-align:center;}
+#formAdd {margin:5% 20% 0% 60%}
+#push{margin: 0% 10% 0% 0%;}
+#score {font-size: .5em; text-decoration: underline; text-align: center;}
+li#this.burger-status{text-decoration: bold;}
+h1,#avail,.status{text-align: center}
+li.burger-status, .btn, #grid-snap,li,h4 {
+    
+    width:  auto;
+    height: auto;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+ul.devoured-status {
+    
+    width:  100%;
+    height: 100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12.8em;
+}
+}
+@media only screen and (max-width: 325px) and (min-width: 300px){
+  *{cursor:pointer;}
+   div,.col-12,.form-group,.s12 {
+	background-color:transparent !important;;
+}
+h1,h2,h3,h4{font-family: 'Fruktur', cursive;}
+div#a, div#b, div#c, h2 {
+    
+    width:  100%;
+    height:  100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+label {display:none;}
+.dropdown,.sub-menu{display:none;}
+#thread {font-size:1.5em;}
+.col-3{width:100%;}
+.col-9{width:100%;}
+.col-12{width:100%;}
+/*img.drawn-border{pa}*/
+.btn-img.btn-tap{margin:05% 0% 0% 45%;}
+#this.burger-status {color:#bb5c06;}
+#grid-snap {margin:0% 40% 0% 10%}
+#grid-add {margin:5% 40% 0% 10%}
+#page-header{font-size:.6em;padding-top: 8%;margin:0% 10% 0% 10%;text-align: center}
+h1,#that,.status {font-size: 1.5em;color:#fbd303;position:relative;margin:0% 20% 0% 30%;padding:0px 90px 0px 0px;text-decoration: underline;}
+#avail {color:#000;text-decoration: underline;}
+li#this.burger-status{text-decoration: bold;}
+#that {margin:0% 40% 0% 10%; text-align:center;}
+#formAdd {margin:5% 20% 0% 30%}
+#page-header{font-size:1.2em;padding-top: 8%;margin:0% 10% 0% 10%;text-align: center}
+#push{margin: 0% 10% 0% -10%;}
+#score {font-size:.5em;text-decoration: underline;text-align:center;}
+h1,#avail,.status{text-align: center}
+li.burger-status, .btn, #grid-snap,li,h4 {
+    
+    width:  auto;
+    height: auto;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+ul.devoured-status {
+    
+    width:  100%;
+    height: 100%;
+    position: relative;	
+    font-family: 'Gravitas One', cursive;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12.8em;
+}
+}
+
+/*@media (max-width: 320px) {
+   
+div#a, div#b, div#c {
+    float: none;
+    width: auto
+}
+*/
+
+.parallax img {
+
+}
+.sweetsParallax img {
+
+}
+section.sweetsParallax { 
+	width: 100%;
+    text-align: center;
+    padding: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+}
+
+section.sweetsParallax::after {
+	content: "";
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1; 
+	justify-content: center;
+	height: 300px;
+	width: 100%;
+	background-image: url(../images/donut-background.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+	animation-name: parallaxBack;
+	animation-duration: 6s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+section.burger-ops {
+	display: flex;
+	justify-content: row;	
+}
+section.sweets-ops {
+	display: flex;
+	justify-content: row;	
+}
+
+.burger-status {
+	font-size: 1.6em;
+}
+.sweets-status {
+	font-size: 1.6em;
+}
+.create-update-form,.form-group {
+	background-color:transparent !important;
+	position: relative;
+	margin: 0% 40% 0% 0%;
+}
+
+label {
+	color: red;
+	position: relative;
+	top: 0;
+	font-size: 10px;
+	margin: 0% 59% 0% 23%;
+	padding: 0 10px;
+	-webkit-transition: top .2s ease-in-out, 
+	                  font-size .2s ease-in-out;
+	transition: top .2s ease-in-out, 
+	          font-size .2s ease-in-out;
+}
+
+.active {
+  top: 0px;
+  font-size: 12px;
+  color: red;
+}
+
+
+input[type=text] {
+  /*padding:  24px 16px 18px 16px;*/
+  font-size: 20px;
+  color: red;
+} 
+
+input[type=text]:focus {
+  outline: none;
+}
+
+button {
+	padding: 10px 20px;
+	text-transform: uppercase;
+	margin: 10px 0px;
+	color: white;
+	background: red;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.dropdown 
+{
+color: #555 !important;
+margin: 3px -22px 0 0 !important;
+position: relative !important;
+height: 17px !important;
+text-align:left !important;
+}
+
+.submenu
+{
+background: #fff !important;
+position: absolute !important;
+top: -12px !important;
+left: -20px !important;
+z-index: 100 !important;
+width: 135px !important;
+display: none !important;
+margin-left: 10px !important; 
+padding: 40px 0 5px !important;
+border-radius: 6px !important;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+}
+.dropdown li a 
+{
+color: #555555 !important;
+display: block !important;
+font-family: arial !important;
+font-weight: bold !important;
+padding: 6px 15px !important;
+cursor: pointer !important;
+text-decoration:none !important;
+}
+
+.dropdown li a:hover
+{
+background:#155FB0 !important;
+color: #FFFFFF !important;
+text-decoration: none !important;
+}
+a.account 
+{
+font-size: 11px !important;
+line-height: 16px !important;
+color: #555 !important;
+position: absolute !important;
+z-index: 110 !important;
+display: block !important;
+padding: 11px 0 0 20px !important;
+height: 28px !important;
+width: 115px !important;
+margin: 11px 0 0 10px !important;
+text-decoration: none !important;
+background: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAECAYAAABCxiV9AAAAIklEQVQI12NgYGBwA+JsLBgkDgZuuCTQFSAk/v//j64ADgAE3AirQOYYigAAAABJRU5ErkJggg==) 116px 17px no-repeat;
+cursor:pointer !important;
+
+    border-radius: 6px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+}
+.root
+{
+list-style:none !important;
+margin:0px auto !important;
+padding:0px !important;
+font-size: 11px !important;
+padding: 11px 0 0 0px !important;
+border-top:1px solid #dedede !important;
+}
+.btn-img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+    outline: 1px dotted blue;
+}
+.btn-img .img-wrap {
+    margin: 10px;
+}
+
+.btn-img img {
+    display: block;
+}
+
+.btn-img:hover .img-wrap {
+    background-color: black;
+}
+
+.btn-img:hover img {
+    opacity: 0.8;
+}
